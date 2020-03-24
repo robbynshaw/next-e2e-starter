@@ -1,4 +1,4 @@
-import { IAppState } from "../store";
+import { IAppState } from "@redux/store";
 
 export function selectSeedPhrase(state: IAppState): string {
   const {

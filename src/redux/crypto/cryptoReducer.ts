@@ -1,4 +1,4 @@
-import { ICryptoAction } from "./cryptoActions";
+import { ICryptoAction } from "@redux/crypto/cryptoActions";
 
 export interface ICryptoState {
   seedPhrase: string;

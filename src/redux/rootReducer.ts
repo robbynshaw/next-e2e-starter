@@ -1,4 +1,4 @@
-import cryptoReducer from "./crypto/cryptoReducer";
+import cryptoReducer from "@redux/crypto/cryptoReducer";
 import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({

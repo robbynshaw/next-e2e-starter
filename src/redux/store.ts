@@ -1,6 +1,6 @@
 import { createStore } from "redux";
-import { ICryptoState } from "./crypto/cryptoReducer";
-import rootReducer from "./rootReducer";
+import { ICryptoState } from "@redux/crypto/cryptoReducer";
+import rootReducer from "@redux/rootReducer";
 
 export interface IAppState {
   crypto: ICryptoState;
