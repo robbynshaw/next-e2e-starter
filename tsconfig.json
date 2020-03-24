@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "baseUrl": "src",
     "lib": [
       "dom",
       "dom.iterable",
@@ -17,7 +16,17 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": [ "src/*" ],
+      "@elements/*": [ "src/components/elements/*" ],
+      "@icons/*": [ "src/components/icons/*" ],
+      "@components/*": [ "src/components/*" ],
+      "@pages/*": [ "src/pages/*" ],
+      "@layouts/*": [ "src/layouts/*" ],
+      "@redux/*": [ "src/redux/*" ]
+    }
   },
   "exclude": [
     "node_modules"
