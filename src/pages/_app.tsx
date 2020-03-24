@@ -1,7 +1,9 @@
 import App from "next/app";
 import { Provider } from "react-redux";
 import withRedux from "next-redux-wrapper";
-import store from "redux/store";
+import { ThemeProvider } from "styled-components";
+import store from "@redux/store";
+import theme from "@src/theme";
 
 class CustomApp extends App<{ store: any }> {
   public static async getInitialProps({ Component, ctx }) {
@@ -15,7 +17,9 @@ class CustomApp extends App<{ store: any }> {
     const { Component, pageProps, store } = this.props;
     return (
       <Provider store={store}>
-        <Component {...pageProps} />
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
       </Provider>
     );
   }
