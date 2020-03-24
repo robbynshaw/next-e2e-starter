@@ -1,12 +1,21 @@
 import Head from 'next/head'
+import { NextPage } from 'next'
+import routes from 'routes'
 
-const Home = () => (
+const Home: NextPage = () => (
   <div className="container">
     <Head>
       <title>Create Next App</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
+    <nav>
+      <a href={routes.auth.login} title="Login">
+        <button>
+          Login
+        </button>
+      </a>
+    </nav>
     <main>
       <h1 className="title">
         Welcome to <a href="https://nextjs.org">Next.js!</a>
@@ -65,6 +74,28 @@ const Home = () => (
         flex-direction: column;
         justify-content: center;
         align-items: center;
+      }
+
+      nav {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 15px;
+      }
+
+      nav button {
+        background-color: white;
+        border: 3px solid black;
+        border-radius: 3px;
+        padding: 5px 10px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      nav button:hover {
+        background-color: black;
+        color: white;
       }
 
       main {
