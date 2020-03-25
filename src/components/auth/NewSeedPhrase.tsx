@@ -1,13 +1,14 @@
 import React from "react";
 import Routes from "@src/routes";
 import Router from "next/router";
-import Button from "@components/elements/Button";
-import LockIcon from "@components/icons/LockIcon";
-import FormControlLabel from "@components/forms/FormControlLabel";
-import Checkbox from "@components/forms/Checkbox";
-import FormGroup from "@components/forms/FormGroup";
+import Button from "@elements/Button";
+import LockIcon from "@icons/LockIcon";
+import Checkbox from "@elements/Checkbox";
+import InitStepper from "@components/auth/InitStepper";
 
-const exportAsFile = (a: string, b: string, c: string) => { };
+import { FormGroup, FormControlLabel } from "@material-ui/core";
+
+const exportAsFile = (a: string, b: string, c: string) => {};
 
 export interface IOnboardingInitiator {
   location: string;
@@ -82,66 +83,70 @@ const NewSeedPhrase = (props: INewSeedPhraseProps) => {
     );
   };
 
-  const handleChange = (key: string) => { };
+  const handleChange = (key: string) => {};
 
   const createCheckbox = (key: string, label: string) => (
-    <FormControlLabel label={label}>
-      <Checkbox
-        checked={false}
-        onChange={() => handleChange(key)}
-        value={key}
-      />
-    </FormControlLabel>
+    <Checkbox value={key}>{label}</Checkbox>
+    // <FormControlLabel label={label} control={() => (
+    //   <Checkbox
+    //     checked={false}
+    //     onChange={() => handleChange(key)}
+    //     value={key}
+    //   />
+    // )} />
   );
 
   return (
-    <div className="reveal-seed-phrase">
-      <div className="seed-phrase__sections">
-        <div className="seed-phrase__main">
-          <div className="first-time-flow__header">Secret Backup Phrase</div>
-          <div className="first-time-flow__text-block">
-            Your secret backup phrase makes it easy to backup and restore your
-            account.
+    <>
+      <InitStepper isNew={true} activeStep={1} />
+      <div className="reveal-seed-phrase">
+        <div className="seed-phrase__sections">
+          <div className="seed-phrase__main">
+            <div className="first-time-flow__header">Secret Backup Phrase</div>
+            <div className="first-time-flow__text-block">
+              Your secret backup phrase makes it easy to backup and restore your
+              account.
+            </div>
+            <div className="first-time-flow__text-block">
+              WARNING: Never disclose your backup phrase. Anyone with this
+              phrase will have full access to your account, including data which
+              will allow them to impersonate you on this system forever.
+            </div>
+            {this.renderSecretWordsContainer()}
           </div>
-          <div className="first-time-flow__text-block">
-            WARNING: Never disclose your backup phrase. Anyone with this phrase
-            will have full access to your account, including data which will
-            allow them to impersonate you on this system forever.
+          <div className="seed-phrase__side">
+            <h2>Did You...?</h2>
+            <FormGroup row>
+              {createCheckbox(
+                "storePhrase",
+                "Store this phrase in your password manager"
+              )}
+              {createCheckbox(
+                "writePhrase",
+                "Write it on and then store some secret pieces of paper"
+              )}
+              {createCheckbox("memoPhrase", "Memorize this phrase (maybe?)")}
+              {createCheckbox(
+                "downPhrase",
+                "Download this phrase and back it up somewhere safe and secure"
+              )}
+            </FormGroup>
           </div>
-          {this.renderSecretWordsContainer()}
         </div>
-        <div className="seed-phrase__side">
-          <h2>Did You...?</h2>
-          <FormGroup row>
-            {createCheckbox(
-              "storePhrase",
-              "Store this phrase in your password manager"
-            )}
-            {createCheckbox(
-              "writePhrase",
-              "Write it on and then store some secret pieces of paper"
-            )}
-            {createCheckbox("memoPhrase", "Memorize this phrase (maybe?)")}
-            {createCheckbox(
-              "downPhrase",
-              "Download this phrase and back it up somewhere safe and secure"
-            )}
-          </FormGroup>
+        <div className="reveal-seed-phrase__buttons">
+          <Button onClick={handleSkip}>Remind Me Later</Button>
+          <Button onClick={handleNext} disabled={!isShowingSeedPhrase}>
+            Next
+          </Button>
         </div>
-      </div>
-      <div className="reveal-seed-phrase__buttons">
-        <Button onClick={handleSkip}>Remind Me Later</Button>
-        <Button onClick={handleNext} disabled={!isShowingSeedPhrase}>
-          Next
-        </Button>
-      </div>
-      {/* {onboardingInitiator ? (
+        {/* {onboardingInitiator ? (
         <Snackbar
           open={false} // todo
           message="'Remind Me later' will close this tab and direct back to ..."
         />
       ) : null} */}
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -15,7 +15,7 @@ const Description = styled.p`
 `;
 
 const Nav = () => (
-  <LinkButton href={routes.auth.login} title="Login" passHref>
+  <LinkButton href={routes.auth.index} title="Login" passHref>
     Login
   </LinkButton>
 );

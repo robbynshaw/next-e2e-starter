@@ -5,6 +5,7 @@ import Checkbox from "@elements/Checkbox";
 import LinkButton from "@elements/LinkButton";
 import Card from "@elements/Card";
 import BlockQuote from "@elements/BlockQuote";
+import InitStepper from "@components/auth/InitStepper";
 
 const PrepareForNewSeed = () => {
   const [totalChecked, setTotalChecked] = React.useState(0);
@@ -20,6 +21,7 @@ const PrepareForNewSeed = () => {
 
   return (
     <>
+      <InitStepper isNew={true} activeStep={1} />
       <H1>Checklist</H1>
       <Card>
         <Checkbox value="pwd-mgr" onChange={handleCheck}>

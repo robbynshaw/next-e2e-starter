@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import { FunctionComponent } from "react";
 import { useRouter } from "next/router";
 import CenteredEmptyLayout from "@layouts/CenteredEmpty";
+import InitStepper from "@components/auth/InitStepper";
 import { H1 } from "@elements/Headers";
 import Card from "@elements/Card";
 import NavList from "@elements/NavList";
@@ -17,6 +18,7 @@ const Select: NextPage = () => {
 
   const Content: FunctionComponent = () => (
     <>
+      <InitStepper isNew={isNew} activeStep={0} />
       <H1>Where {isNew ? "would you like your" : "is your"} data backed up?</H1>
       <Card>
         <NavList aria-label="main service selections">
