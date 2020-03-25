@@ -55,8 +55,14 @@ const PrepareForNewSeed = () => {
         </BlockQuote>
         <p>
           This app keeps you in control of your own, private data, so the backup
-          phrase is <strong>really important</strong>. (
-          <a href="https://en.bitcoin.it/wiki/Seed_phrase">Learn more</a>)
+          phrase is <strong>really important</strong>.
+        </p>
+        <p>
+          If you would like to learn more, MetaMask has&nbsp;
+          <a href="https://metamask.zendesk.com/hc/en-us/articles/360015489591-Basic-Safety-Tips">
+            a great article
+          </a>
+          &nbsp;about backup phrases.
         </p>
       </Card>
     </>

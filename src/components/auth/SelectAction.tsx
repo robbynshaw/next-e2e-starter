@@ -28,17 +28,17 @@ const SelectAction = (props: ISelectActionProps) => {
       </H1>
       <Grid>
         <ActionCard
-          title="No, I already have a seed phrase"
-          description="Import your existing account using a 12 word seed phrase"
+          title="No, I already have a backup phrase"
+          description="Import your existing account using a 12 word backup phrase"
           linkText="Import Account"
-          linkHref={Routes.auth.seed.import}
+          linkHref={Routes.auth.connect.select(false)}
           Icon={RestoreIcon}
         />
         <ActionCard
           title="Yes, let's get set up!"
-          description="This will create a new account and seed phrase"
+          description="This will create a new account and backup phrase"
           linkText="Create an Account"
-          linkHref={Routes.auth.seed.prep}
+          linkHref={Routes.auth.connect.select(true)}
           Icon={AddIcon}
         />
       </Grid>
