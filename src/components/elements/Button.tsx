@@ -15,6 +15,13 @@ const Button = styled.button`
     color: #0070f3;
     border-color: #0070f3;
   }
+
+  &:hover[disabled],
+  &:focus[disabled],
+  &:active[disabled] {
+    color: ${props => props.theme.colors.border};
+    border-color: ${props => props.theme.colors.border};
+  }
 `;
 
 export default Button;

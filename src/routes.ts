@@ -5,9 +5,10 @@ const routes = {
     seed: {
       confirm: "/auth/seed/confirm",
       import: "/auth/seed/import",
-      prep: "/auth/seed/prep"
+      prep: "/auth/seed/prep",
+      generate: "/auth/seed/generate"
     }
   }
-}
+};
 
 export default routes;

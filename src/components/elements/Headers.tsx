@@ -17,3 +17,21 @@ export const H1 = styled.h1`
     text-decoration: underline;
   }
 `;
+
+export const H2 = styled.h2`
+  margin: 0;
+  line-height: 1;
+  font-size: 3rem;
+  text-align: center;
+
+  & a {
+    color: #0070f3;
+    text-decoration: none;
+  }
+
+  & a:hover,
+  & a:focus,
+  & a:active {
+    text-decoration: underline;
+  }
+`;

@@ -1,12 +1,12 @@
 import { NextPage } from "next";
-import routes from "@src/routes";
-import Button from "@components/elements/Button";
 import styled from "styled-components";
+import routes from "@src/routes";
 import CenteredEmptyLayout from "@layouts/CenteredEmpty";
 import Grid from "@elements/Grid";
 import Code from "@elements/Code";
-import ExternalLinkCard from "@src/components/elements/ExternalLinkCard";
+import ExternalLinkCard from "@elements/ExternalLinkCard";
 import { H1 } from "@elements/Headers";
+import LinkButton from "@src/components/elements/LinkButton";
 
 const Description = styled.p`
   text-align: center;
@@ -15,9 +15,9 @@ const Description = styled.p`
 `;
 
 const Nav = () => (
-  <a href={routes.auth.login} title="Login">
-    <Button>Login</Button>
-  </a>
+  <LinkButton href={routes.auth.login} title="Login" passHref>
+    Login
+  </LinkButton>
 );
 
 const Main = () => (
