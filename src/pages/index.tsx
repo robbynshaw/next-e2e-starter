@@ -1,12 +1,13 @@
-import { NextPage } from "next";
-import styled from "styled-components";
-import routes from "@src/routes";
-import CenteredEmptyLayout from "@layouts/CenteredEmpty";
-import Grid from "@elements/Grid";
-import Code from "@elements/Code";
-import ExternalLinkCard from "@elements/ExternalLinkCard";
-import { H1 } from "@elements/Headers";
-import LinkButton from "@src/components/elements/LinkButton";
+import React, { FunctionComponent } from 'react';
+import { NextPage } from 'next';
+import styled from 'styled-components';
+import routes from '@src/routes';
+import CenteredEmptyLayout from '@layouts/CenteredEmpty';
+import Grid from '@elements/Grid';
+import Code from '@elements/Code';
+import ExternalLinkCard from '@elements/ExternalLinkCard';
+import { H1 } from '@elements/Headers';
+import LinkButton from '@src/components/elements/LinkButton';
 
 const Description = styled.p`
   text-align: center;
@@ -14,20 +15,22 @@ const Description = styled.p`
   font-size: 1.5rem;
 `;
 
-const Nav = () => (
+const Nav: FunctionComponent = () => (
   <LinkButton href={routes.auth.index} title="Login" passHref>
     Login
   </LinkButton>
 );
 
-const Main = () => (
+const Main: FunctionComponent = () => (
   <>
     <H1>
-      Welcome to <a href="https://nextjs.org">Next.js!</a>
+      Welcome to
+      <a href="https://nextjs.org">Next.js!</a>
     </H1>
 
     <Description>
-      Get started by editing <Code>pages/index.js</Code>
+      Get started by editing
+      <Code>pages/index.js</Code>
     </Description>
 
     <Grid>

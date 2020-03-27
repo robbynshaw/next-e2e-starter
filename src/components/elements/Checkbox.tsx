@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
-import styled from "styled-components";
+import React, { ReactNode, FunctionComponent } from 'react';
+import styled from 'styled-components';
 
 const FormControl = styled.div`
   margin: 10px;
@@ -27,13 +27,13 @@ const Label = styled.label`
   }
 `;
 
-export interface ICheckboxProps {
+export interface CheckboxProps {
   children: ReactNode;
   value: string;
   onChange?: (value: string, checked: boolean) => void;
 }
 
-const Checkbox = (props: ICheckboxProps) => {
+const Checkbox: FunctionComponent<CheckboxProps> = (props: CheckboxProps) => {
   const { children, value, onChange } = props;
 
   const [checked, setChecked] = React.useState(false);
@@ -49,12 +49,7 @@ const Checkbox = (props: ICheckboxProps) => {
   return (
     <FormControl>
       <Label>
-        <Input
-          type="checkbox"
-          value={value}
-          checked={checked}
-          onChange={handleChange}
-        />
+        <Input type="checkbox" value={value} checked={checked} onChange={handleChange} />
         {children}
       </Label>
     </FormControl>

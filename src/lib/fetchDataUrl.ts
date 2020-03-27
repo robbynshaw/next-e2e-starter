@@ -1,4 +1,4 @@
-import fetch from "isomorphic-fetch";
+import fetch from 'isomorphic-fetch';
 
 const fetchDataUrl = async (url: string): Promise<string> => {
   const res = await fetch(url);

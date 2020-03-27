@@ -1,16 +1,11 @@
-import { ICryptoAction } from "@redux/crypto/cryptoActions";
-
-export interface ICryptoState {
+export interface CryptoState {
   seedPhrase: string;
 }
 
-const initialState: ICryptoState = {
-  seedPhrase: ""
+const initialState: CryptoState = {
+  seedPhrase: '',
 };
 
-export default function cryptoReducer(
-  state: ICryptoState = initialState,
-  action: ICryptoAction
-): ICryptoState {
+export default function cryptoReducer(state: CryptoState = initialState): CryptoState {
   return state;
 }

@@ -1,8 +1,8 @@
-import { ComponentType } from "react";
-import styled from "styled-components";
-import Head from "next/head";
-import EmptyLayout from "@layouts/Empty";
-import config from "@src/config";
+import React, { ComponentType } from 'react';
+import styled from 'styled-components';
+import Head from 'next/head';
+import EmptyLayout from '@layouts/Empty';
+import config from '@src/config';
 
 const Nav = styled.nav`
   display: flex;

@@ -1,6 +1,6 @@
-import React from "react";
-import { SvgIcon, SvgIconProps } from "@material-ui/core";
-import styled from "styled-components";
+import React from 'react';
+import { SvgIcon, SvgIconProps } from '@material-ui/core';
+import styled from 'styled-components';
 
 const Svg = styled.svg`
   & .cls-1 {
@@ -8,7 +8,7 @@ const Svg = styled.svg`
   }
 `;
 
-export interface IDropboxIconProps extends SvgIconProps {}
+export type IDropboxIconProps = SvgIconProps;
 
 const DropboxIcon = (props: IDropboxIconProps) => {
   return (
@@ -20,18 +20,9 @@ const DropboxIcon = (props: IDropboxIconProps) => {
         viewBox="0 0 235.45 200"
       >
         <title>DropboxGlyph</title>
-        <polygon
-          className="cls-1"
-          points="58.86 0 0 37.5 58.86 75 117.73 37.5 58.86 0"
-        />
-        <polygon
-          className="cls-1"
-          points="176.59 0 117.73 37.5 176.59 75 235.45 37.5 176.59 0"
-        />
-        <polygon
-          className="cls-1"
-          points="0 112.5 58.86 150 117.73 112.5 58.86 75 0 112.5"
-        />
+        <polygon className="cls-1" points="58.86 0 0 37.5 58.86 75 117.73 37.5 58.86 0" />
+        <polygon className="cls-1" points="176.59 0 117.73 37.5 176.59 75 235.45 37.5 176.59 0" />
+        <polygon className="cls-1" points="0 112.5 58.86 150 117.73 112.5 58.86 75 0 112.5" />
         <polygon
           className="cls-1"
           points="176.59 75 117.73 112.5 176.59 150 235.45 112.5 176.59 75"

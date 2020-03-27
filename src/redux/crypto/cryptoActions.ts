@@ -1,12 +1,12 @@
-export interface ICryptoPayload {
+export interface CryptoPayload {
   secret: string;
 }
 
-export const SET_SEED = "CRYPTO_SEED_SET";
+export const SET_SEED = 'CRYPTO_SEED_SET';
 
 export type ActionTypes = typeof SET_SEED;
 
-export interface ICryptoAction {
+export default interface CryptoAction {
   type: ActionTypes;
-  payload: ICryptoPayload;
+  payload: CryptoPayload;
 }

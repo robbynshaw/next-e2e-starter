@@ -1,8 +1,8 @@
-import { IAppState } from "@redux/store";
+import { AppState } from '@redux/store';
 
-export function selectSeedPhrase(state: IAppState): string {
+export function selectSeedPhrase(state: AppState): string {
   const {
-    crypto: { seedPhrase }
+    crypto: { seedPhrase },
   } = state;
   return seedPhrase;
 }

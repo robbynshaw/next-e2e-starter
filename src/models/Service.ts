@@ -1,4 +1,4 @@
-export default interface IService {
+export default interface Service {
   isDefault: boolean;
   name: string;
   tokenReceived: number;

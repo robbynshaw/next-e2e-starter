@@ -1,14 +1,14 @@
-import Link, { LinkProps } from "next/link";
-import Card from "./Card";
-import { ReactNode } from "react";
-import styled from "styled-components";
+import React, { ReactNode, FunctionComponent } from 'react';
+import Link, { LinkProps } from 'next/link';
+import styled from 'styled-components';
+import Card from './Card';
 
-export interface ILinkCardProps extends LinkProps {
+export interface LinkCardProps extends LinkProps {
   children: ReactNode;
   className?: string;
 }
 
-const RawLinkCard = (props: ILinkCardProps) => {
+const RawLinkCard: FunctionComponent<LinkCardProps> = (props: LinkCardProps) => {
   const { children, className, ...rest } = props;
 
   return (

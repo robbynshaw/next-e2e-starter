@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const BlockQuote = styled.blockquote`
   color: ${props => props.theme.colors.primary};

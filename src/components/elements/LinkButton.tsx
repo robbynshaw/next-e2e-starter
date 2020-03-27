@@ -1,15 +1,15 @@
-import Link, { LinkProps } from "next/link";
-import { ReactNode } from "react";
-import Button from "@elements/Button";
-import styled from "styled-components";
+import Link, { LinkProps } from 'next/link';
+import React, { ReactNode } from 'react';
+import Button from '@elements/Button';
+import styled from 'styled-components';
 
-export interface ILinkButtonProps extends LinkProps {
+export interface LinkButtonProps extends LinkProps {
   children: ReactNode;
   title: string;
   disabled?: boolean;
 }
 
-const LinkButton = (props: ILinkButtonProps) => {
+const LinkButton = (props: LinkButtonProps) => {
   const { children, title, disabled, ...rest } = props;
 
   const handleClick = () => {

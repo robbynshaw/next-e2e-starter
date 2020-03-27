@@ -1,15 +1,13 @@
-import Document, { Head, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import React from 'react';
+import Document, { Head, Main, NextScript, DocumentInitialProps } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
-  render() {
+  render(): JSX.Element {
     return (
       <html lang="en">
         <Head>
-          <meta
-            name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width"
-          />
+          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
 
           {/* PWA primary color
           <meta name="theme-color" content={theme.palette.primary.main} /> */}
@@ -26,14 +24,14 @@ export default class MyDocument extends Document {
     );
   }
 
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
     try {
-      ctx.renderPage = () =>
+      ctx.renderPage = (): void =>
         originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -44,7 +42,7 @@ export default class MyDocument extends Document {
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
-        )
+        ),
       };
     } finally {
       sheet.seal();

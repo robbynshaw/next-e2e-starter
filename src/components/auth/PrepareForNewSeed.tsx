@@ -1,15 +1,15 @@
-import React from "react";
-import routes from "@src/routes";
-import { H1, H2 } from "@elements/Headers";
-import Checkbox from "@elements/Checkbox";
-import LinkButton from "@elements/LinkButton";
-import Card from "@elements/Card";
-import BlockQuote from "@elements/BlockQuote";
-import InitStepper from "@components/auth/InitStepper";
+import React from 'react';
+import routes from '@src/routes';
+import { H1, H2 } from '@elements/Headers';
+import Checkbox from '@elements/Checkbox';
+import LinkButton from '@elements/LinkButton';
+import Card from '@elements/Card';
+import BlockQuote from '@elements/BlockQuote';
+import InitStepper from '@components/auth/InitStepper';
 
 const PrepareForNewSeed = () => {
   const [totalChecked, setTotalChecked] = React.useState(0);
-  console.log("total checked", totalChecked);
+  console.log('total checked', totalChecked);
 
   const handleCheck = (key: string, val: boolean) => {
     if (val) {
@@ -21,14 +21,14 @@ const PrepareForNewSeed = () => {
 
   return (
     <>
-      <InitStepper isNew={true} activeStep={1} />
+      <InitStepper isNew activeStep={1} />
       <H1>Checklist</H1>
       <Card>
         <Checkbox value="pwd-mgr" onChange={handleCheck}>
           I have a <em>password manager</em> at the ready
           <BlockQuote>
             If you don't use one, maybe check out&nbsp;
-            <a href="https://bitwarden.com/">Bitwarden</a>.
+  <a href="https://bitwarden.com/">Bitwarden</a>.
           </BlockQuote>
         </Checkbox>
         <Checkbox value="pnp" onChange={handleCheck}>
@@ -51,14 +51,15 @@ const PrepareForNewSeed = () => {
           You are about to create a <strong>backup phrase</strong>.
         </p>
         <BlockQuote>
-          A backup phrase is a bunch of words that can be used to import your
-          account into other computers and restore your account if you lose your
-          password.
+          A backup phrase is a bunch of words that can be used to import your account into other
+          computers and restore your account if you lose your password.
         </BlockQuote>
         <p>
-          This app keeps you in control of your own, private data, so the backup
-          phrase is <strong>really important</strong>.
-        </p>
+          This app keeps you in control of your own, private data, so the backup phrase is
+{' '}
+          <strong>really important</strong>
+.
+</p>
         <p>
           If you would like to learn more, MetaMask has&nbsp;
           <a href="https://metamask.zendesk.com/hc/en-us/articles/360015489591-Basic-Safety-Tips">

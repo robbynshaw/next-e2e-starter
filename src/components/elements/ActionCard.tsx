@@ -1,6 +1,6 @@
-import React, { ComponentType } from "react";
-import LinkCard from "@elements/LinkCard";
-import styled from "styled-components";
+import React, { ComponentType, FunctionComponent } from 'react';
+import LinkCard from '@elements/LinkCard';
+import styled from 'styled-components';
 
 const HeaderIcon = styled.div`
   display: flex;
@@ -31,7 +31,7 @@ const LinkText = styled.h2`
   }
 `;
 
-interface IActionCardProps {
+interface ActionCardProps {
   title: string;
   description: string;
   linkText: string;
@@ -39,7 +39,7 @@ interface IActionCardProps {
   Icon: ComponentType;
 }
 
-const ActionCard = (props: IActionCardProps) => {
+const ActionCard: FunctionComponent<ActionCardProps> = (props: ActionCardProps) => {
   const { title, description, linkText, linkHref, Icon } = props;
 
   return (

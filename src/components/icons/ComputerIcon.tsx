@@ -1,3 +1,3 @@
-import ComputerIcon from "@material-ui/icons/Computer";
+import ComputerIcon from '@material-ui/icons/Computer';
 
 export default ComputerIcon;

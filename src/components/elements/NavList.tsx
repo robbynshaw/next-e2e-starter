@@ -1,6 +1,7 @@
-import { List, ListProps } from "@material-ui/core";
+import React from 'react';
+import { List, ListProps } from '@material-ui/core';
 
-export interface INavListProps extends ListProps {}
+export type INavListProps = ListProps;
 
 const NavList = (props: INavListProps) => {
   return <List component="nav" {...props} />;
