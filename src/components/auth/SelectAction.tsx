@@ -31,14 +31,14 @@ const SelectAction = (props: ISelectActionProps) => {
           title="No, I already have a backup phrase"
           description="Import your existing account using a 12 word backup phrase"
           linkText="Import Account"
-          linkHref={Routes.auth.connect.select(false)}
+          linkHref={Routes.auth.service.select(false)}
           Icon={RestoreIcon}
         />
         <ActionCard
           title="Yes, let's get set up!"
           description="This will create a new account and backup phrase"
           linkText="Create an Account"
-          linkHref={Routes.auth.connect.select(true)}
+          linkHref={Routes.auth.service.select(true)}
           Icon={AddIcon}
         />
       </Grid>

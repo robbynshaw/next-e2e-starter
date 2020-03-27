@@ -25,7 +25,9 @@
       "@components/*": [ "src/components/*" ],
       "@pages/*": [ "src/pages/*" ],
       "@layouts/*": [ "src/layouts/*" ],
-      "@redux/*": [ "src/redux/*" ]
+      "@redux/*": [ "src/redux/*" ],
+      "@lib/*": [ "src/lib/*" ],
+      "@models/*": [ "src/models/*" ]
     }
   },
   "exclude": [

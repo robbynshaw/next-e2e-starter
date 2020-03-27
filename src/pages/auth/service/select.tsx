@@ -10,19 +10,24 @@ import ListItemButton from "@elements/ListItemButton";
 import DropboxIcon from "@icons/DropboxIcon";
 import ComputerIcon from "@icons/ComputerIcon";
 import CloudIcon from "@icons/CloudIcon";
+import routes from "@src/routes";
+import Link from "next/link";
+import { getBool } from "@src/lib/routeHelpers";
 
 const Select: NextPage = () => {
   const router = useRouter();
-  const { stage } = router.query;
-  const isNew = stage === "new";
+  const { isNew } = router.query;
+  const isnew = getBool(isNew);
 
   const Content: FunctionComponent = () => (
     <>
-      <InitStepper isNew={isNew} activeStep={0} />
-      <H1>Where {isNew ? "would you like your" : "is your"} data backed up?</H1>
+      <InitStepper isNew={isnew} activeStep={0} />
+      <H1>Where {isnew ? "would you like your" : "is your"} data backed up?</H1>
       <Card>
         <NavList aria-label="main service selections">
-          <ListItemButton icon={DropboxIcon}>Dropbox</ListItemButton>
+          <Link href={routes.auth.service.connect("dropbox", isnew)} passHref>
+            <ListItemButton icon={DropboxIcon}>Dropbox</ListItemButton>
+          </Link>
           {/* <ListItemButton icon={CloudIcon}>Google Drive</ListItemButton>
           <ListItemButton icon={CloudIcon}>Microsoft OneDrive</ListItemButton>
           <ListItemButton icon={CloudIcon}>IPFS</ListItemButton>

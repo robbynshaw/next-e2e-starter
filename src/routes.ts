@@ -3,10 +3,12 @@ const routes = {
   auth: {
     index: "/auth/",
     login: "/auth/login",
-    connect: {
-      select: (isNew: boolean) =>
-        `/auth/connect/select/${isNew ? "new" : "import"}`,
-      service: (name: string) => `/auth/connect/service/${name}`
+    service: {
+      select: (isNew: boolean) => `/auth/service/select?isNew=${isNew}`,
+      connect: (name: string, isNew: boolean) =>
+        `/auth/service/${name}/connect?isNew=${isNew}`,
+      complete: (name: string, isNew: boolean) =>
+        `/auth/service/${name}/complete?isNew=${isNew}`
     },
     seed: {
       confirm: "/auth/seed/confirm",
