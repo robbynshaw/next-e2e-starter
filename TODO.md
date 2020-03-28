@@ -1,0 +1,5 @@
+- [ ] Fix same-line no-space issue from eslint & prettier
+- [ ] Move logic in display components into callbacks
+- [ ] Localization
+- [ ] Fix button sizes
+- [ ] Add profile pic in corner
