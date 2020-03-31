@@ -1,7 +1,7 @@
 {
   "name": "next-e2e-starter",
   "version": "0.1.0",
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/robbynshaw/next-e2e-starter.git"
   },
@@ -13,7 +13,9 @@
     "start": "next start",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx src",
-    "stylelint": "stylelint --ignore-pattern '*.css' './src/**/*.tsx'"
+    "stylelint": "stylelint --ignore-pattern '*.css' './src/**/*.tsx'",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.7",
@@ -31,13 +33,21 @@
     "urijs": "^1.19.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@storybook/addon-actions": "^5.3.17",
+    "@storybook/addon-knobs": "^5.3.17",
+    "@storybook/addon-links": "^5.3.17",
+    "@storybook/addon-storysource": "^5.3.17",
+    "@storybook/addons": "^5.3.17",
+    "@storybook/react": "^5.3.17",
     "@types/node": "^13.9.3",
     "@types/react": "^16.9.25",
     "@types/styled-components": "^5.0.1",
-    "babel-plugin-styled-components": "^1.10.7",
-    "typescript": "^3.8.3",
-    "eslint": "^6.8.0",
     "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "babel-preset-react-app": "^9.1.2",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb-typescript": "^7.0.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-import-resolver-typescript": "^2.0.0",
@@ -50,9 +60,10 @@
     "stylelint": "^13.2.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.10.0"
+    "stylelint-processor-styled-components": "^1.10.0",
+    "typescript": "^3.8.3"
   },
-    "stylelint": {
+  "stylelint": {
     "processors": [
       "stylelint-processor-styled-components"
     ],
