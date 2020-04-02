@@ -1,12 +1,11 @@
-import styled from 'styled-components';
+import styled from '@src/styled';
 
 const Code = styled.code`
-  background: #fafafa;
-  border-radius: 5px;
+  display: inline-block;
+  font-family: ${props => props.theme.fonts.monospace};
+  background: ${props => props.theme.colors.gray};
+  border-radius: ${props => props.theme.radii.default}px;
   padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
 `;
 
 export default Code;

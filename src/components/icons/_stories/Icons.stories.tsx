@@ -8,7 +8,7 @@ import RestoreIcon from '@icons/RestoreIcon';
 import { Grid } from '@material-ui/core';
 
 export default {
-  title: 'Icons',
+  title: 'Theme/Icons',
   component: AddIcon,
 };
 

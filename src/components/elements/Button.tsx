@@ -1,12 +1,8 @@
-import styled from 'styled-components';
+import styled from '@src/styled';
+import { Button as RawButton } from 'rebass';
 
-const Button = styled.button`
-  padding: 5px 10px;
-  background-color: #ffffff;
+const Button = styled(RawButton)`
   cursor: pointer;
-  font-weight: 600;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
 
   &:hover,
@@ -19,8 +15,8 @@ const Button = styled.button`
   &:hover[disabled],
   &:focus[disabled],
   &:active[disabled] {
-    color: ${props => props.theme.colors.border};
-    border-color: ${props => props.theme.colors.border};
+    color: ${props => props.theme.colors.highlight};
+    border-color: ${props => props.theme.colors.highlight};
   }
 `;
 

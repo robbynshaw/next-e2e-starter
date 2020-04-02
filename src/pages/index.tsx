@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { NextPage } from 'next';
-import styled from 'styled-components';
+import styled from '@src/styled';
 import routes from '@src/routes';
 import CenteredEmptyLayout from '@layouts/CenteredEmpty';
 import Grid from '@elements/Grid';

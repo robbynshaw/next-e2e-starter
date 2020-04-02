@@ -5,7 +5,7 @@ import RestoreIcon from '@icons/RestoreIcon';
 import AddIcon from '@icons/AddIcon';
 import ActionCard from '@elements/ActionCard';
 import { H1 } from '@elements/Headers';
-import styled from 'styled-components';
+import styled from '@src/styled';
 
 const AppName = styled.span`
   display: block;

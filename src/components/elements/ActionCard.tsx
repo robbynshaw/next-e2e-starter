@@ -1,6 +1,6 @@
 import React, { ComponentType, FunctionComponent } from 'react';
 import LinkCard from '@elements/LinkCard';
-import styled from 'styled-components';
+import styled from '@src/styled';
 
 const HeaderIcon = styled.div`
   display: flex;

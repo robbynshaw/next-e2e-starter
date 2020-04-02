@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@src/styled';
 
 const Card = styled.div`
   margin: 1rem;

@@ -1,7 +1,7 @@
 import Link, { LinkProps } from 'next/link';
 import React, { ReactNode } from 'react';
 import Button from '@elements/Button';
-import styled from 'styled-components';
+import styled from '@src/styled';
 
 export interface LinkButtonProps extends LinkProps {
   children: ReactNode;

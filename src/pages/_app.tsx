@@ -2,20 +2,12 @@ import React from 'react';
 import App from 'next/app';
 import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'emotion-theming';
 import { CssBaseline } from '@material-ui/core';
 import store, { AppStore } from '@redux/store';
 import theme from '@src/theme';
 
 class CustomApp extends App<{ store: AppStore }> {
-  componentDidMount(): void {
-    // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles) {
-      jssStyles.parentElement.removeChild(jssStyles);
-    }
-  }
-
   public render(): JSX.Element {
     const { Component, pageProps, store } = this.props;
     return (

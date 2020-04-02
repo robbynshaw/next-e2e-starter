@@ -1,6 +1,6 @@
 import React from 'react';
 import { SvgIcon, SvgIconProps } from '@material-ui/core';
-import styled from 'styled-components';
+import styled from '@src/styled';
 
 const Svg = styled.svg`
   & .cls-1 {

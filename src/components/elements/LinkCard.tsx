@@ -1,6 +1,6 @@
 import React, { ReactNode, FunctionComponent } from 'react';
 import Link, { LinkProps } from 'next/link';
-import styled from 'styled-components';
+import styled from '@src/styled';
 import Card from './Card';
 
 export interface LinkCardProps extends LinkProps {

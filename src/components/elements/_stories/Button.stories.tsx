@@ -7,12 +7,20 @@ export default {
   component: Button,
 };
 
-export const Text = () => <Button onClick={action('clicked')}>Hello Button</Button>;
+export const Primary = () => (
+  <Button variant="primary" onClick={action('clicked')}>
+    Hello Button
+  </Button>
+);
 
-export const Emoji = () => (
-  <Button onClick={action('clicked')}>
-    <span role="img" aria-label="so cool">
-      😀 😎 👍 💯
-    </span>
+export const Secondary = () => (
+  <Button variant="secondary" onClick={action('clicked')}>
+    Hello Button
+  </Button>
+);
+
+export const Outlined = () => (
+  <Button variant="outline" onClick={action('clicked')}>
+    Hello Button
   </Button>
 );

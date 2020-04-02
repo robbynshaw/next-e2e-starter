@@ -1,5 +1,5 @@
 import React, { ComponentType } from 'react';
-import styled from 'styled-components';
+import styled from '@src/styled';
 import Head from 'next/head';
 import EmptyLayout from '@layouts/Empty';
 import config from '@src/config';

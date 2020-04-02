@@ -15,12 +15,17 @@
     "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx src",
     "stylelint": "stylelint --ignore-pattern '*.css' './src/**/*.tsx'",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook:build": "build-storybook"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "@material-ui/core": "^4.9.7",
     "@material-ui/icons": "^4.9.1",
+    "@rebass/forms": "^4.0.6",
+    "@rebass/preset": "^4.0.5",
     "dropbox": "^4.0.30",
+    "emotion-theming": "^10.0.27",
     "idb": "^5.0.1",
     "isomorphic-fetch": "^2.2.1",
     "next": "9.3.1",
@@ -28,8 +33,10 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-redux": "^7.2.0",
+    "rebass": "^4.0.7",
     "redux": "^4.0.5",
     "styled-components": "^5.0.1",
+    "styled-system": "^5.1.5",
     "urijs": "^1.19.2"
   },
   "devDependencies": {
@@ -45,6 +52,7 @@
     "@types/styled-components": "^5.0.1",
     "@typescript-eslint/eslint-plugin": "^2.23.0",
     "babel-loader": "^8.1.0",
+    "babel-plugin-emotion": "^10.0.29",
     "babel-plugin-styled-components": "^1.10.7",
     "babel-preset-react-app": "^9.1.2",
     "eslint": "^6.8.0",

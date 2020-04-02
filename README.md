@@ -17,7 +17,27 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 ```bash
 # View and build components in isolation
 yarn storybook
+yarn storybook:build
+
+# Linting
+yarn lint
+yarn lint:fix
+yarn stylelint
 ```
+
+## Tech Stack
+
+### Styling
+
+- [Emotion](https://emotion.sh)
+  - CSS-in-JS
+  - Same as `styled-components` but includes things like dev css labels, better SSR, etc.
+- [Styled-System](https://styled-system.com/)
+  - Utility theming props
+- [Rebass](https://rebassjs.org)
+  - Extensible base component set based on the above
+
+> Heavily considered 'https://xstyled.dev/'
 
 ## Learn More
 

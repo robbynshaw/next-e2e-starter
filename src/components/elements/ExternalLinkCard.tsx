@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@src/styled';
 
 const ExternalLinkCard = styled.a`
   margin: 1rem;

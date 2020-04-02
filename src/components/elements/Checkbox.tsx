@@ -1,31 +1,5 @@
 import React, { ReactNode, FunctionComponent } from 'react';
-import styled from 'styled-components';
-
-const FormControl = styled.div`
-  margin: 10px;
-  padding: 5px;
-`;
-
-const Input = styled.input`
-  display: inline-block;
-  padding-right: 10px;
-  margin-right: 20px;
-  margin-top: 0px;
-  vertical-align: middle;
-`;
-
-const Label = styled.label`
-  display: block;
-  vertical-align: middle;
-
-  & blockquote {
-    margin-top: 5px;
-    margin-bottom: 0px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 16px;
-  }
-`;
+import { Label, Checkbox as RawCheckbox } from '@rebass/forms';
 
 export interface CheckboxProps {
   children: ReactNode;
@@ -47,12 +21,12 @@ const Checkbox: FunctionComponent<CheckboxProps> = (props: CheckboxProps) => {
   };
 
   return (
-    <FormControl>
+    <>
       <Label>
-        <Input type="checkbox" value={value} checked={checked} onChange={handleChange} />
+        <RawCheckbox id={value} name={value} checked={checked} onChange={handleChange} />
         {children}
       </Label>
-    </FormControl>
+    </>
   );
 };
 

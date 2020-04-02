@@ -6,4 +6,4 @@ export default {
   component: Code,
 };
 
-export const Default = () => <Code>I'm just a humble Code</Code>;
+export const Default = () => <Code>I'm just a humble code block</Code>;
