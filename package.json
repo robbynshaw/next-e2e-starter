@@ -37,7 +37,7 @@
     "redux": "^4.0.5",
     "styled-components": "^5.0.1",
     "styled-system": "^5.1.5",
-    "urijs": "^1.19.2"
+    "urijs": "^1.19.9"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
